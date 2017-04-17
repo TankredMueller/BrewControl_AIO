@@ -45,3 +45,9 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.b#?
+*.bat
+*.pov
+AOI_Hutschiene.pov.none.txt
+AOI_Hutschiene.mpd
+*.s#?
