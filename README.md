@@ -1,7 +1,7 @@
 # BrewControl_AIO
 A top hat rail implementation of the world famous AiO brew control.
 
-For further information see http://hobbybrauer.de/forum/wiki/doku.php/brauen_mit_arduino_all_in_one_aio
+For further information on AiO brewControl, see http://hobbybrauer.de/forum/wiki/doku.php/brauen_mit_arduino_all_in_one_aio
 
 This project consists of the following parts:
 - A PCB design suitable to be integrated in a top hat rail case
