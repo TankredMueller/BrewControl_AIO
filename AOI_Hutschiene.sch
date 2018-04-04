@@ -18106,13 +18106,13 @@ high speed (Philips)</description>
 </class>
 </classes>
 <parts>
-<part name="U$1" library="Arduino-clone" deviceset="NANO" device=""/>
+<part name="U$1" library="Arduino-clone" deviceset="NANO" device="" value="ArdNano_with_socket"/>
 <part name="SV1" library="con-ml" deviceset="ML16" device=""/>
-<part name="IC2" library="uln-udn" deviceset="ULN2803A" device=""/>
-<part name="R1" library="resistor" deviceset="R-EU_" device="0207/10" value="180"/>
+<part name="IC2" library="uln-udn" deviceset="ULN2803A" device="" value="ULN2803"/>
+<part name="R1" library="resistor" deviceset="R-EU_" device="0207/10" value="120"/>
 <part name="X2" library="con-wago-500" deviceset="W237-6" device=""/>
 <part name="TR1" library="trafo" deviceset="EI30-1" device="" value="6V, 300mA"/>
-<part name="B1" library="rectifier" deviceset="RB1A" device=""/>
+<part name="B1" library="rectifier" deviceset="RB1A" device="" value="B40C2000"/>
 <part name="C1" library="rcl" deviceset="C-EU" device="025_050-025X075" value="100n"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="025_050-025X075" value="100n"/>
 <part name="C3" library="rcl" deviceset="CPOL-EU" device="E5-13" value="1mF"/>
@@ -18133,9 +18133,9 @@ high speed (Philips)</description>
 <part name="VCC3" library="supply1" deviceset="VCCIO" device=""/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="R2" library="resistor" deviceset="R-EU_" device="0207/10" value="180"/>
-<part name="LED_HEAT" library="led" deviceset="LED" device="5MM"/>
-<part name="LED_MIX" library="led" deviceset="LED" device="5MM"/>
+<part name="R2" library="resistor" deviceset="R-EU_" device="0207/10" value="120"/>
+<part name="LED_HEAT" library="led" deviceset="LED" device="5MM" value="LED_HEAT_RED"/>
+<part name="LED_MIX" library="led" deviceset="LED" device="5MM" value="LED_MIX_YEL"/>
 <part name="GND9" library="supply1" deviceset="GNDIO" device=""/>
 <part name="GND10" library="supply1" deviceset="GNDIO" device=""/>
 <part name="GND11" library="supply1" deviceset="GNDIO" device=""/>
@@ -18144,8 +18144,8 @@ high speed (Philips)</description>
 <part name="VDD2" library="supply1" deviceset="VDD" device=""/>
 <part name="SV4" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
-<part name="R3" library="resistor" deviceset="R-EU_" device="0207/10" value="12"/>
-<part name="R4" library="resistor" deviceset="R-EU_" device="0207/10" value="4k7"/>
+<part name="R4" library="resistor" deviceset="R-EU_" device="0207/10" value="20"/>
+<part name="R3" library="resistor" deviceset="R-EU_" device="0207/10" value="4k7"/>
 <part name="C4" library="rcl" deviceset="C-EU" device="025_050-025X075" value="100n"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="H1" library="holes" deviceset="MOUNT-PAD-ROUND" device="3.2"/>
@@ -18224,6 +18224,8 @@ in case of short circuit</text>
 <text x="2.54" y="-43.18" size="1.778" layer="95">Optional: D1 pulls heater input to zero
  if mixer is off =&gt; will prevent heating 
 without mixer being in operation</text>
+<text x="93.98" y="-55.88" size="1.778" layer="91">didóde sitzt an falscher stelle</text>
+<text x="93.98" y="-58.42" size="1.778" layer="91">muss VOR die schalter</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="53.34" y="20.32"/>
@@ -18270,8 +18272,8 @@ without mixer being in operation</text>
 <instance part="VDD2" gate="G$1" x="73.66" y="-30.48"/>
 <instance part="SV4" gate="G$1" x="60.96" y="-30.48" rot="R270"/>
 <instance part="P+5" gate="VCC" x="-35.56" y="-35.56"/>
-<instance part="R3" gate="G$1" x="-27.94" y="-40.64" rot="R180"/>
-<instance part="R4" gate="G$1" x="-35.56" y="-48.26" rot="R270"/>
+<instance part="R4" gate="G$1" x="-27.94" y="-40.64" rot="R180"/>
+<instance part="R3" gate="G$1" x="-35.56" y="-48.26" rot="R270"/>
 <instance part="C4" gate="G$1" x="-20.32" y="-66.04" rot="R180"/>
 <instance part="GND12" gate="1" x="-20.32" y="-76.2"/>
 <instance part="H1" gate="G$1" x="-35.56" y="50.8"/>
@@ -18378,7 +18380,7 @@ without mixer being in operation</text>
 <segment>
 <pinref part="X2" gate="-5" pin="KL"/>
 <wire x1="-12.7" y1="-55.88" x2="-35.56" y2="-55.88" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="-35.56" y1="-55.88" x2="-35.56" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="-55.88" x2="-53.34" y2="-55.88" width="0.1524" layer="91"/>
 <junction x="-35.56" y="-55.88"/>
@@ -18504,10 +18506,10 @@ without mixer being in operation</text>
 <wire x1="53.34" y1="-38.1" x2="53.34" y2="-33.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="P+5" gate="VCC" pin="VCC"/>
 <wire x1="-35.56" y1="-43.18" x2="-35.56" y2="-40.64" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="-35.56" y1="-40.64" x2="-35.56" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="-40.64" x2="-35.56" y2="-40.64" width="0.1524" layer="91"/>
 <junction x="-35.56" y="-40.64"/>
@@ -18866,6 +18868,17 @@ without mixer being in operation</text>
 <junction x="60.96" y="-48.26"/>
 </segment>
 </net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="X2" gate="-4" pin="KL"/>
+<wire x1="-22.86" y1="-40.64" x2="-20.32" y2="-40.64" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="-20.32" y1="-40.64" x2="-12.7" y2="-40.64" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="-60.96" x2="-20.32" y2="-40.64" width="0.1524" layer="91"/>
+<junction x="-20.32" y="-40.64"/>
+</segment>
+</net>
 <net name="AUX" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="D7"/>
@@ -18904,18 +18917,6 @@ without mixer being in operation</text>
 <pinref part="X3" gate="-3" pin="KL"/>
 <pinref part="H4" gate="G$1" pin="MOUNT"/>
 <wire x1="-38.1" y1="27.94" x2="-45.72" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="DSS_VCC" class="0">
-<segment>
-<pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="X2" gate="-4" pin="KL"/>
-<wire x1="-22.86" y1="-40.64" x2="-20.32" y2="-40.64" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="-20.32" y1="-40.64" x2="-12.7" y2="-40.64" width="0.1524" layer="91"/>
-<wire x1="-20.32" y1="-60.96" x2="-20.32" y2="-40.64" width="0.1524" layer="91"/>
-<junction x="-20.32" y="-40.64"/>
-<label x="-17.78" y="-40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
