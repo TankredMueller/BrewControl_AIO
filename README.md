@@ -6,6 +6,6 @@ For further information on AiO brewControl, see http://hobbybrauer.de/forum/wiki
 This project consists of the following parts:
 - A PCB design suitable to be integrated in a top hat rail case
   -> for a preconfigured shopping cart, please use this link: https://www.reichelt.de/my/1339621
-- A wiring plan
+- A wiring plan (see https://github.com/TankredMueller/BrewControl_AIO/blob/master/AIO_project_wiring_plan.pdf)
 
 Please note that this project is still in early beta status! You are welcome to build it, but don´t take it personally if something goes wrong. I will assume no responsibility for any use of this project.
